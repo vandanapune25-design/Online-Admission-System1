@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Online Admission Portal</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Arial, sans-serif; }
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e9e7ff, #f8f7ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    min-height: 650px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: white;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(40, 25, 120, .18);
+}
+
+.left {
+    background: linear-gradient(145deg, #21145f, #5140c9, #8875f5);
+    color: white;
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.brand { font-size: 23px; font-weight: 800; letter-spacing: 1px; }
+.tagline { color: #dedaff; margin-top: 8px; }
+
+.hero { margin: 55px 0; }
+.hero h1 { font-size: 52px; line-height: 1.12; margin-bottom: 22px; }
+.hero p { color: #e5e1ff; font-size: 17px; line-height: 1.7; }
+
+.features { display: flex; flex-wrap: wrap; gap: 12px; }
+.feature {
+    background: rgba(255,255,255,.14);
+    border: 1px solid rgba(255,255,255,.25);
+    padding: 11px 15px;
+    border-radius: 25px;
+    font-size: 13px;
+}
+
+.left-footer { color: #dedaff; font-size: 13px; }
+
+.right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 45px;
+}
+
+.login-box { width: 100%; max-width: 390px; }
+.logo { font-size: 48px; text-align: center; margin-bottom: 12px; }
+h2 { text-align: center; color: #25176f; font-size: 31px; }
+.subtitle { text-align: center; color: #85839a; margin: 10px 0 30px; }
+
+.tabs { display: flex; gap: 10px; margin-bottom: 28px; }
+.tabs button {
+    flex: 1;
+    padding: 13px;
+    border: 1px solid #dedbf5;
+    border-radius: 9px;
+    background: white;
+    color: #5140c9;
+    font-weight: bold;
+    cursor: pointer;
+}
+.tabs .active { background: #5140c9; color: white; }
+
+label { display: block; color: #37334e; font-weight: 600; margin: 17px 0 8px; }
+input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #dedbea;
+    border-radius: 9px;
+    outline: none;
+    font-size: 14px;
+}
+input:focus { border-color: #6654dc; box-shadow: 0 0 0 3px #eeeaff; }
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 18px 0;
+    font-size: 13px;
+    color: #77738d;
+}
+.options label { display: flex; align-items: center; gap: 7px; margin: 0; font-weight: normal; }
+.options input { width: auto; }
+a { color: #5140c9; text-decoration: none; font-weight: 600; }
+
+.login-btn {
+    width: 100%;
+    padding: 16px;
+    border: 0;
+    border-radius: 9px;
+    background: linear-gradient(90deg, #4931cf, #806cf1);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.login-btn:hover { opacity: .9; }
+.register { text-align: center; margin-top: 25px; color: #77738d; font-size: 14px; }
+@media(max-width: 750px) {
+    .container { grid-template-columns: 1fr; }
+    .left { min-height: 300px; padding: 30px; }
+    .hero { margin: 35px 0; }
+    .hero h1 { font-size: 38px; }
+    .right { padding: 35px 22px; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+    <section class="left">
+        <div>
+            <div class="brand">🎓 ADMISSION PORTAL</div>
+            <p class="tagline">Your Future Begins Here</p>
+        </div>
+
+        <div class="hero">
+            <h1>Dream.<br>Learn.<br>Achieve.</h1>
+            <p>Take the first step towards your bright future. Apply online and make your college admission journey simple and easy.</p>
+        </div>
+
+        <div>
+            <div class="features">
+                <span class="feature">✓ Easy Application</span>
+                <span class="feature">✓ Online Process</span>
+                <span class="feature">✓ Track Your Status</span>
+            </div>
+            <p class="left-footer" style="margin-top:35px;">© 2026 Online Admission System</p>
+        </div>
+    </section>
+
+    <section class="right">
+        <div class="login-box">
+            <div class="logo">🎓</div>
+            <h2>Welcome Back!</h2>
+            <p class="subtitle">Login to continue your application</p>
+
+            <div class="tabs">
+                <button class="active" type="button">Student Login</button>
+                <button type="button">Admin Login</button>
+            </div>
+
+            <form>
+                <label>Email / Mobile Number</label>
+                <input type="text" placeholder="Enter your email or mobile" required>
+
+                <label>Password</label>
+                <input type="password" placeholder="Enter your password" required>
+
+                <div class="options">
+                    <label><input type="checkbox"> Remember me</label>
+                    <a href="#">Forgot Password?</a>
+                </div>
+
+                <button class="login-btn" type="button">Login →</button>
+            </form>
+
+            <p class="register">Don't have an account? <a href="/register">Register Now</a></p>
+        </div>
+    </section>
+</div>
+</body>
+</html>
